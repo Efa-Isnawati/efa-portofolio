@@ -1,6 +1,9 @@
 .navbar-nav .nav-link.active {
   text-decoration: underline !important;
 }
+#btnSwitch.bi.bi-brightness-high-fill {
+  border-radius: 30px;
+}
 .fixed {
   position: fixed;
   top: 0;
