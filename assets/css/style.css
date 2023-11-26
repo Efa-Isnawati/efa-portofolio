@@ -1,3 +1,9 @@
+body {
+  font-family: Tahoma, sans-serif;
+}
+h1 {
+  font: bold;
+}
 .navbar-nav .nav-link.active {
   text-decoration: underline !important;
 }
@@ -20,4 +26,50 @@
 }
 .img-menu {
   padding-top: 50px;
+}
+.about {
+  text-align: center;
+}
+.about-item {
+  text-align: justify;
+}
+.img-bio {
+  max-width: 150px;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20%;
+  margin-bottom: 20px;
+  animation: animate__animated animate__fadeInUp;
+}
+.skill-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-section li {
+  margin-bottom: 10px;
+}
+
+.skill-section i {
+  margin-right: 10px;
+}
+
+.experience-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-section li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+
+.experience-section i {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
 }

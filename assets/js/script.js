@@ -1,7 +1,10 @@
 window.onscroll = function () {
   myFunction();
 };
-
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize AOS
+  AOS.init();
+});
 var navbar = document.querySelector(".navbar");
 var sticky = navbar.offsetTop;
 
