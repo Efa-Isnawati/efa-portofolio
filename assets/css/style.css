@@ -20,27 +20,64 @@ h1 {
   padding-top: 50px;
   align-items: center;
   text-align: left;
+  color: #408de0;
+  font-weight: bold;
 }
 .bio-item {
   text-align: justify;
 }
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+
 .img-menu {
   padding-top: 50px;
+  animation: moveBlob 6s alternate-reverse;
 }
+
+.blob {
+  position: absolute;
+  padding-top: 400px;
+  /* top: 0;
+  left: 0; */
+  width: 80%;
+  height: 80%;
+  background: url("/assets/images/stain.png") center center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  animation: moveBlob 3s infinite alternate; /* Animasi gerakan kanan kiri */
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 400px; /* Atur tinggi elemen blob untuk layar mobile */
+  }
+}
+
+@keyframes moveBlob {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .about {
   text-align: center;
 }
 .about-item {
   text-align: justify;
+  padding-top: 50px;
 }
 .img-bio {
-  max-width: 150px;
+  max-width: 200px;
+  padding-top: 50px;
   height: auto;
   align-items: center;
   justify-content: center;
-  border-radius: 20%;
+  border-radius: 10rem;
   margin-bottom: 20px;
-  animation: animate__animated animate__fadeInUp;
+  animation: moveBlob 2s reverse;
 }
 .skill-section ul {
   list-style: none;
@@ -54,22 +91,79 @@ h1 {
 .skill-section i {
   margin-right: 10px;
 }
-
-.experience-section ul {
-  list-style: none;
-  padding: 0;
+.experience-section {
+  padding: 50px 0;
 }
 
-.experience-section li {
+.experience-item {
   position: relative;
-  padding-left: 30px;
-  margin-bottom: 15px;
+  padding-left: 40px;
+  margin-bottom: 40px;
 }
 
-.experience-section i {
+.experience-item::before {
+  content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 10px;
+  left: 20px;
+  top: 10px;
+  width: 2px;
+  height: 100%;
+  background-color: #007bff;
+}
+
+.experience-item::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #007bff;
+}
+
+.experience-content {
+  margin-left: 20px;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.experience-duration {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.experience-description {
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+  .experience-item::before {
+    left: 10px;
+  }
+
+  .experience-item::after {
+    left: 5px;
+  }
+
+  .experience-content {
+    margin-left: 10px;
+  }
+}
+.projects {
+  padding-bottom: 30px;
+  color: #408de0;
+  font-weight: bold;
+}
+.project-card {
+  margin-bottom: 20px;
+  border: 1px solid #0b0a0a; /* Tambahkan border */
+  background-color: #0a0909; /* Tambahkan latar belakang */
 }
