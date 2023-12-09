@@ -167,3 +167,11 @@ h1 {
   border: 1px solid #0b0a0a; /* Tambahkan border */
   background-color: #0a0909; /* Tambahkan latar belakang */
 }
+.achievement-card {
+  text-align: center;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
